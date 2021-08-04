@@ -1,11 +1,11 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, ReactElement } from 'react';
 
-interface IChild {
+interface IChildProps {
     name: string;
     onChange(value: string): void;
 }
 
-const Child = ({name, onChange}: IChild) => {
+const Child = ({name, onChange}: IChildProps): ReactElement => {
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
         onChange(e.target.value);
